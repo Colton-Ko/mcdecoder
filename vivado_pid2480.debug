@@ -1,0 +1,16 @@
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2021.1.1 (64-bit)
+# SW Build: 3286242 on Wed Jul 28 13:09:46 MDT 2021
+# IP Build: 3279568 on Wed Jul 28 16:48:48 MDT 2021
+# Current time: Sat Nov 06 20:08:44 CST 2021
+# Process ID (PID): 2480
+# User: ko
+# OS: Ubuntu
+# Project: mcdecoder
+# Part: xc7a35tcpg236-2
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+Target FileSet is null. Cannot finish Drag-Drop operation.

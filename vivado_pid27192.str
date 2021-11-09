@@ -1,0 +1,130 @@
+/*
+
+Xilinx Vivado v2021.1.1 (64-bit) [Major: 2021, Minor: 1]
+SW Build: 3286242 on Wed Jul 28 13:09:46 MDT 2021
+IP Build: 3279568 on Wed Jul 28 16:48:48 MDT 2021
+
+Process ID (PID): 27192
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Wed Nov 03 15:24:09 CST 2021
+Time zone: 	Taipei Standard Time (Asia/Taipei)
+
+OS: Ubuntu
+OS Version: 5.11.0-38-generic
+OS Architecture: amd64
+Available processors (cores): 8
+
+Display: 0
+Screen size: 1920x1080
+Screen resolution (DPI): 100
+Available screens: 1
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+Scale size: 12
+
+Java version: 	11.0.2 64-bit
+Java home: 	/tools/Xilinx/Vivado/2021.1/tps/lnx64/jre11.0.2
+Java executable: 	/tools/Xilinx/Vivado/2021.1/tps/lnx64/jre11.0.2/bin/java
+Java initial memory (-Xms): 	256 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	ko
+User home directory: /home/ko
+User working directory: /home/ko/Desktop/elec3342/mcdecoder
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: /tools/Xilinx/Vivado
+HDI_APPROOT: /tools/Xilinx/Vivado/2021.1
+RDI_DATADIR: /tools/Xilinx/Vivado/2021.1/data
+RDI_BINDIR: /tools/Xilinx/Vivado/2021.1/bin
+
+Vivado preferences file: /home/ko/.Xilinx/Vivado/2021.1/vivado.xml
+Vivado preferences directory: /home/ko/.Xilinx/Vivado/2021.1/
+Vivado layouts directory: /home/ko/.Xilinx/Vivado/2021.1/data/layouts
+PlanAhead jar file: 	/tools/Xilinx/Vivado/2021.1/lib/classes/planAhead.jar
+Vivado log file: 	/home/ko/Desktop/elec3342/mcdecoder/vivado.log
+Vivado journal file: 	/home/ko/Desktop/elec3342/mcdecoder/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-27192-K126LTX
+
+Xilinx Environment Variables
+----------------------------
+XILINX: /tools/Xilinx/Vivado/2021.1/ids_lite/ISE
+XILINX_DSP: /tools/Xilinx/Vivado/2021.1/ids_lite/ISE
+XILINX_HLS: /tools/Xilinx/Vitis_HLS/2021.1
+XILINX_PLANAHEAD: /tools/Xilinx/Vivado/2021.1
+XILINX_VITIS: 
+XILINX_VIVADO: /tools/Xilinx/Vivado/2021.1
+XILINX_VIVADO_HLS: /tools/Xilinx/Vivado/2021.1
+
+
+GUI allocated memory:	444 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 1,968 MB
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// bz (cs):  Open Project : addNotify
+// Opening Vivado Project: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.xpr. Version: Vivado v2021.1 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: FLOW_ADDED
+// Tcl Message: open_project /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 88 MB (+90140kb) [00:00:08]
+// [Engine Memory]: 1,857 MB (+1795213kb) [00:00:08]
+// [GUI Memory]: 109 MB (+17363kb) [00:00:08]
+// [GUI Memory]: 116 MB (+1477kb) [00:00:09]
+// WARNING: HEventQueue.dispatchEvent() is taking  3147 ms.
+// Tcl Message: open_project /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2021.1/data/ip'. 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,784 MB. GUI used memory: 65 MB. Current time: 11/3/21, 3:24:09 PM CST
+// Project name: mcdecoder; location: /home/ko/Desktop/elec3342/mcdecoder; part: xc7a35tcpg236-2
+dismissDialog("Open Project"); // bz
+// Tcl Command: 'rdi::info_commands {device::*}'
+// Tcl Command: 'rdi::info_commands {debug::*}'
+// Tcl Command: 'rdi::info_commands {*}'
+// Tcl Message: update_compile_order -fileset sources_1 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mcdecoder(Behavioral) (mcdecoder.vhd)]", 1, false); // D
+// [GUI Memory]: 133 MB (+11216kb) [00:00:17]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mcdecoder(Behavioral) (mcdecoder.vhd)]", 1, false, false, false, false, false, true); // D - Double Click
+// bz (cs):  Opening Editor : addNotify
+// [GUI Memory]: 153 MB (+13924kb) [00:00:22]
+// WARNING: HEventQueue.dispatchEvent() is taking  2023 ms.
+dismissDialog("Opening Editor"); // bz
+// [Engine Memory]: 1,970 MB (+21206kb) [00:00:41]
+// Elapsed time: 89 seconds
+selectCodeEditor("mcdecoder.vhd", 227, 223); // bP
+// Elapsed time: 97 seconds
+selectCodeEditor("mcdecoder.vhd", 43, 419); // bP
+// Elapsed time: 122 seconds
+selectCodeEditor("mcdecoder.vhd", 59, 410); // bP
+// HMemoryUtils.trashcanNow. Engine heap size: 1,934 MB. GUI used memory: 92 MB. Current time: 11/3/21, 3:54:14 PM CST
+// WARNING: HEventQueue.dispatchEvent() is taking  108695 ms.

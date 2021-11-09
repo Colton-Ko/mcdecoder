@@ -1,0 +1,2072 @@
+#-----------------------------------------------------------
+# Vivado v2021.1.1 (64-bit)
+# SW Build 3286242 on Wed Jul 28 13:09:46 MDT 2021
+# IP Build 3279568 on Wed Jul 28 16:48:48 MDT 2021
+# Start of session at: Thu Nov  4 10:18:56 2021
+# Process ID: 2949
+# Current directory: /home/ko/Desktop/elec3342/mcdecoder
+# Command line: vivado /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.xpr
+# Log file: /home/ko/Desktop/elec3342/mcdecoder/vivado.log
+# Journal file: /home/ko/Desktop/elec3342/mcdecoder/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.xpr
+WARNING: [filemgmt 56-3] Default IP Output Path : Could not find the directory '/home/ko/Desktop/elec3342/mcdecoder/mcdecoder.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2021.1/data/ip'.
+open_project: Time (s): cpu = 00:00:17 ; elapsed = 00:00:05 . Memory (MB): peak = 7488.766 ; gain = 74.203 ; free physical = 9106 ; free virtual = 29491
+update_compile_order -fileset sources_1
+INFO: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'Testbench'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/ko/Desktop/elec3342/mcdecoder/mcdecoder.sim/sim_1/behav/xsim'
+INFO: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/tools/Xilinx/Vivado/2021.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'Testbench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/ko/Desktop/elec3342/mcdecoder/mcdecoder.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj Testbench_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sources_1/new/mcdecoder.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'mcdecoder'
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/ko/Desktop/elec3342/mcdecoder/mcdecoder.sim/sim_1/behav/xsim'
+xelab -wto 69457726296b4ea2bb78d484392f4c3b --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot Testbench_behav xil_defaultlib.Testbench -log elaborate.log
+Vivado Simulator v2021.1.1
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2021.1/bin/unwrapped/lnx64.o/xelab -wto 69457726296b4ea2bb78d484392f4c3b --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot Testbench_behav xil_defaultlib.Testbench -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package std.env
+Compiling architecture behavioral of entity xil_defaultlib.mcdecoder [mcdecoder_default]
+Compiling architecture behavioral of entity xil_defaultlib.testbench
+Built simulation snapshot Testbench_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/ko/Desktop/elec3342/mcdecoder/mcdecoder.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Testbench_behav -key {Behavioral:sim_1:Functional:Testbench} -tclbatch {Testbench.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source Testbench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Testbench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:15 ; elapsed = 00:00:07 . Memory (MB): peak = 7650.109 ; gain = 70.840 ; free physical = 8279 ; free virtual = 28869
+run all
+Note: output ASCII code (decimal) = 65
+Time: 1925 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 65
+Time: 1975 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 65
+Time: 2025 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 65
+Time: 2075 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 65
+Time: 2125 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 65
+Time: 2175 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 65
+Time: 2225 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 65
+Time: 2275 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 65
+Time: 2325 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 65
+Time: 2375 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 65
+Time: 2425 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 65
+Time: 2475 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 65
+Time: 2525 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 65
+Time: 2575 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 65
+Time: 2625 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 65
+Time: 2675 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 65
+Time: 2725 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 65
+Time: 2775 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 65
+Time: 2825 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 65
+Time: 2875 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 65
+Time: 2925 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 65
+Time: 2975 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 65
+Time: 3025 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 65
+Time: 3075 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 65
+Time: 3125 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 65
+Time: 3175 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 65
+Time: 3225 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 65
+Time: 3275 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 65
+Time: 3325 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 65
+Time: 3375 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 65
+Time: 3425 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 65
+Time: 3475 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 65
+Time: 3525 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 65
+Time: 3575 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 65
+Time: 3625 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 65
+Time: 3675 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 65
+Time: 3725 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 65
+Time: 3775 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 84
+Time: 3825 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 3875 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 3925 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 3975 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 4025 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 4075 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 4125 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 4175 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 4225 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 4275 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 4325 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 4375 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 4425 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 4475 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 4525 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 4575 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 4625 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 4675 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 4725 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 4775 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 4825 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 4875 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 4925 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 4975 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 5025 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 5075 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 5125 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 5175 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 5225 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 5275 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 5325 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 5375 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 5425 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 5475 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 5525 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 5575 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 5625 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 5675 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 5725 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 5775 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 5825 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 5875 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 5925 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 5975 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 6025 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 6075 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 6125 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 6175 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 6225 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 6275 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 6325 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 6375 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 6425 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 6475 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 6525 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 6575 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 6625 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 6675 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 6725 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 6775 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 6825 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 6875 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 6925 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 6975 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 7025 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 7075 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 7125 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 7175 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 7225 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 7275 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 7325 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 7375 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 7425 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 7475 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 7525 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 7575 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 7625 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 7675 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 7725 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 7775 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 7825 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 7875 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 7925 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 7975 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 8025 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 8075 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 8125 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 8175 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 8225 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 8275 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 8325 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 8375 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 8425 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 8475 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 8525 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 8575 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 8625 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 8675 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 8725 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 8775 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 8825 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 8875 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 8925 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 8975 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 9025 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 9075 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 9125 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 9175 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 9225 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 9275 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 9325 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 9375 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 9425 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 9475 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 9525 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 9575 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 9625 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 9675 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 9725 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 9775 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 9825 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 9875 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 9925 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 9975 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+$finish called at time : 10 ms : File "/home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd" Line 158
+run all
+Note: output ASCII code (decimal) = 77
+Time: 10025 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 10075 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 10125 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 10175 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 10225 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 10275 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 10325 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 10375 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 10425 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 10475 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 10525 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 10575 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 10625 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 10675 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 10725 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 10775 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 10825 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 10875 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 10925 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 10975 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 11025 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 11075 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 11125 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 11175 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 11225 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 11275 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 11325 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 11375 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 11425 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 11475 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 11525 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 11575 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 11625 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 11675 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 11725 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 11775 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 11825 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 11875 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 11925 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 11975 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 12025 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 12075 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 12125 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 12175 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 12225 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 12275 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 12325 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 12375 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 12425 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 12475 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 12525 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 12575 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 12625 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 12675 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 12725 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 12775 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 12825 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 12875 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 12925 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 12975 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 13025 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 13075 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 13125 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 13175 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 13225 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 13275 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 13325 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 13375 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 13425 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 13475 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 13525 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 13575 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 13625 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 13675 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 13725 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 13775 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 13825 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 13875 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 13925 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 13975 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 14025 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 14075 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 14125 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 14175 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 14225 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 14275 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 14325 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 14375 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 14425 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 14475 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 14525 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 14575 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 14625 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 14675 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 14725 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 14775 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 14825 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 14875 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 14925 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 14975 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 15025 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 15075 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 15125 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 15175 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 15225 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 15275 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 15325 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 15375 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 15425 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 15475 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 15525 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 15575 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 15625 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 15675 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 15725 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 15775 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 15825 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 15875 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 15925 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 15975 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 16025 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 16075 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 16125 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 16175 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 16225 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 16275 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 16325 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 16375 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 16425 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 16475 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 16525 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 16575 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 16625 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 16675 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 16725 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 16775 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 16825 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 16875 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 16925 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 16975 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 17025 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 17075 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 17125 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 17175 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 17225 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 17275 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 17325 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 17375 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 17425 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 17475 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 17525 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 17575 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 17625 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 17675 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 17725 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 17775 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 17825 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 17875 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 17925 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 17975 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 18025 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 18075 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 18125 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 18175 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 18225 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 18275 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 18325 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 18375 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 18425 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 18475 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 18525 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 18575 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 18625 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 18675 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 18725 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 18775 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 18825 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 18875 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 18925 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 18975 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 19025 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 19075 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 19125 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 19175 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 19225 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 19275 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 19325 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 19375 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 19425 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 19475 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 19525 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 19575 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 19625 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 19675 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 19725 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 19775 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 19825 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 19875 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 19925 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 19975 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+$finish called at time : 20 ms : File "/home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd" Line 158
+run all
+Note: output ASCII code (decimal) = 77
+Time: 20025 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 20075 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 20125 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 20175 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 20225 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 20275 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 20325 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 20375 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 20425 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 20475 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 20525 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 20575 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 20625 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 20675 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 20725 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 20775 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 20825 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 20875 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 20925 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 20975 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 21025 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 21075 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 21125 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 21175 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 21225 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 21275 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 21325 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 21375 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 21425 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 21475 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 21525 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 21575 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 21625 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 21675 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 21725 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 21775 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 21825 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 21875 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 21925 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 21975 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 22025 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 22075 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 22125 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 22175 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 22225 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 22275 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 22325 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 22375 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 22425 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 22475 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 22525 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 22575 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 22625 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 22675 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 22725 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 22775 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 22825 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 22875 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 22925 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 22975 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 23025 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 23075 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 23125 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 23175 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 23225 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 23275 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 23325 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 23375 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 23425 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 23475 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 23525 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 23575 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 23625 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 23675 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 23725 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 23775 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 23825 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 23875 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 23925 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 23975 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 24025 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 24075 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 24125 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 24175 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 24225 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 24275 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 24325 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 24375 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 24425 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 24475 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 24525 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 24575 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 24625 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 24675 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 24725 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 24775 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 24825 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 24875 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 24925 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 24975 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 25025 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 25075 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 25125 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 25175 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 25225 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 25275 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 25325 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 25375 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 25425 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 25475 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 25525 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 25575 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 25625 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 25675 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 25725 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 25775 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 25825 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 25875 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 25925 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 25975 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 26025 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 26075 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 26125 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 26175 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 26225 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 26275 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 26325 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 26375 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 26425 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 26475 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 26525 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 26575 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 26625 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 26675 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 26725 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 26775 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 26825 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 26875 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 26925 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 26975 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 27025 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 27075 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 27125 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 27175 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 27225 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 27275 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 27325 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 27375 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 27425 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 27475 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 27525 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 27575 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 27625 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 27675 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 27725 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 27775 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 27825 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 27875 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 27925 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 27975 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 28025 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 28075 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 28125 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 28175 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 28225 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 28275 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 28325 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 28375 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 28425 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 28475 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 28525 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 28575 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 28625 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 28675 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 28725 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 28775 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 28825 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 28875 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 28925 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 28975 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 29025 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 29075 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 29125 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 29175 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 29225 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 29275 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 29325 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 29375 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 29425 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 29475 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 29525 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 29575 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 29625 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 29675 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 29725 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 29775 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 29825 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 29875 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 29925 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 29975 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+$finish called at time : 30 ms : File "/home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd" Line 158
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'Testbench'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/ko/Desktop/elec3342/mcdecoder/mcdecoder.sim/sim_1/behav/xsim'
+INFO: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/tools/Xilinx/Vivado/2021.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'Testbench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/ko/Desktop/elec3342/mcdecoder/mcdecoder.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj Testbench_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sources_1/new/mcdecoder.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'mcdecoder'
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/ko/Desktop/elec3342/mcdecoder/mcdecoder.sim/sim_1/behav/xsim'
+xelab -wto 69457726296b4ea2bb78d484392f4c3b --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot Testbench_behav xil_defaultlib.Testbench -log elaborate.log
+Vivado Simulator v2021.1.1
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2021.1/bin/unwrapped/lnx64.o/xelab -wto 69457726296b4ea2bb78d484392f4c3b --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot Testbench_behav xil_defaultlib.Testbench -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package std.env
+Compiling architecture behavioral of entity xil_defaultlib.mcdecoder [mcdecoder_default]
+Compiling architecture behavioral of entity xil_defaultlib.testbench
+Built simulation snapshot Testbench_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/ko/Desktop/elec3342/mcdecoder/mcdecoder.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Testbench_behav -key {Behavioral:sim_1:Functional:Testbench} -tclbatch {Testbench.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source Testbench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Testbench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 7682.996 ; gain = 4.871 ; free physical = 8231 ; free virtual = 28832
+run all
+Note: output ASCII code (decimal) = 65
+Time: 1925 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 84
+Time: 3825 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 3875 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 3925 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 3975 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 4025 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 4075 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 4125 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 4175 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 4225 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 4275 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 4325 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 4375 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 4425 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 4475 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 4525 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 4575 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 4625 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 4675 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 4725 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 4775 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 4825 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 4875 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 4925 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 4975 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 5025 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 5075 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 5125 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 5175 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 5225 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 5275 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 5325 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 5375 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 5425 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 5475 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 5525 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 5575 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 5625 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 5675 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 5725 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 5775 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 5825 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 5875 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 5925 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 5975 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 6025 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 6075 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 6125 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 6175 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 6225 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 6275 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 6325 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 6375 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 6425 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 6475 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 6525 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 6575 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 6625 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 6675 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+$finish called at time : 10 ms : File "/home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd" Line 158
+run all
+$finish called at time : 20 ms : File "/home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd" Line 158
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'Testbench'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/ko/Desktop/elec3342/mcdecoder/mcdecoder.sim/sim_1/behav/xsim'
+INFO: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/tools/Xilinx/Vivado/2021.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'Testbench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/ko/Desktop/elec3342/mcdecoder/mcdecoder.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj Testbench_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sources_1/new/mcdecoder.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'mcdecoder'
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/ko/Desktop/elec3342/mcdecoder/mcdecoder.sim/sim_1/behav/xsim'
+xelab -wto 69457726296b4ea2bb78d484392f4c3b --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot Testbench_behav xil_defaultlib.Testbench -log elaborate.log
+Vivado Simulator v2021.1.1
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2021.1/bin/unwrapped/lnx64.o/xelab -wto 69457726296b4ea2bb78d484392f4c3b --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot Testbench_behav xil_defaultlib.Testbench -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package std.env
+Compiling architecture behavioral of entity xil_defaultlib.mcdecoder [mcdecoder_default]
+Compiling architecture behavioral of entity xil_defaultlib.testbench
+Built simulation snapshot Testbench_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/ko/Desktop/elec3342/mcdecoder/mcdecoder.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Testbench_behav -key {Behavioral:sim_1:Functional:Testbench} -tclbatch {Testbench.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source Testbench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Testbench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 7720.008 ; gain = 2.996 ; free physical = 8162 ; free virtual = 28811
+run all
+Note: output ASCII code (decimal) = 65
+Time: 1925 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 84
+Time: 3825 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 6675 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+$finish called at time : 10 ms : File "/home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd" Line 158
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'Testbench'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/ko/Desktop/elec3342/mcdecoder/mcdecoder.sim/sim_1/behav/xsim'
+INFO: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/tools/Xilinx/Vivado/2021.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'Testbench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/ko/Desktop/elec3342/mcdecoder/mcdecoder.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj Testbench_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sources_1/new/mcdecoder.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'mcdecoder'
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/ko/Desktop/elec3342/mcdecoder/mcdecoder.sim/sim_1/behav/xsim'
+xelab -wto 69457726296b4ea2bb78d484392f4c3b --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot Testbench_behav xil_defaultlib.Testbench -log elaborate.log
+Vivado Simulator v2021.1.1
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2021.1/bin/unwrapped/lnx64.o/xelab -wto 69457726296b4ea2bb78d484392f4c3b --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot Testbench_behav xil_defaultlib.Testbench -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package std.env
+Compiling architecture behavioral of entity xil_defaultlib.mcdecoder [mcdecoder_default]
+Compiling architecture behavioral of entity xil_defaultlib.testbench
+Built simulation snapshot Testbench_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/ko/Desktop/elec3342/mcdecoder/mcdecoder.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Testbench_behav -key {Behavioral:sim_1:Functional:Testbench} -tclbatch {Testbench.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source Testbench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Testbench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 7753.027 ; gain = 9.004 ; free physical = 7707 ; free virtual = 28500
+run all
+Note: output ASCII code (decimal) = 65
+Time: 1925 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 84
+Time: 3825 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 6675 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+$finish called at time : 10 ms : File "/home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd" Line 158
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'Testbench'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/ko/Desktop/elec3342/mcdecoder/mcdecoder.sim/sim_1/behav/xsim'
+INFO: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/tools/Xilinx/Vivado/2021.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'Testbench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/ko/Desktop/elec3342/mcdecoder/mcdecoder.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj Testbench_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sources_1/new/mcdecoder.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'mcdecoder'
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/ko/Desktop/elec3342/mcdecoder/mcdecoder.sim/sim_1/behav/xsim'
+xelab -wto 69457726296b4ea2bb78d484392f4c3b --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot Testbench_behav xil_defaultlib.Testbench -log elaborate.log
+Vivado Simulator v2021.1.1
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2021.1/bin/unwrapped/lnx64.o/xelab -wto 69457726296b4ea2bb78d484392f4c3b --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot Testbench_behav xil_defaultlib.Testbench -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package std.env
+Compiling architecture behavioral of entity xil_defaultlib.mcdecoder [mcdecoder_default]
+Compiling architecture behavioral of entity xil_defaultlib.testbench
+Built simulation snapshot Testbench_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/ko/Desktop/elec3342/mcdecoder/mcdecoder.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Testbench_behav -key {Behavioral:sim_1:Functional:Testbench} -tclbatch {Testbench.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source Testbench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Testbench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 7769.043 ; gain = 0.000 ; free physical = 7666 ; free virtual = 28457
+run all
+Note: output ASCII code (decimal) = 65
+Time: 1925 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 84
+Time: 3825 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 6675 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+$finish called at time : 10 ms : File "/home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd" Line 158
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'Testbench'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/ko/Desktop/elec3342/mcdecoder/mcdecoder.sim/sim_1/behav/xsim'
+INFO: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/tools/Xilinx/Vivado/2021.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'Testbench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/ko/Desktop/elec3342/mcdecoder/mcdecoder.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj Testbench_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sources_1/new/mcdecoder.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'mcdecoder'
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/ko/Desktop/elec3342/mcdecoder/mcdecoder.sim/sim_1/behav/xsim'
+xelab -wto 69457726296b4ea2bb78d484392f4c3b --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot Testbench_behav xil_defaultlib.Testbench -log elaborate.log
+Vivado Simulator v2021.1.1
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2021.1/bin/unwrapped/lnx64.o/xelab -wto 69457726296b4ea2bb78d484392f4c3b --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot Testbench_behav xil_defaultlib.Testbench -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package std.env
+Compiling architecture behavioral of entity xil_defaultlib.mcdecoder [mcdecoder_default]
+Compiling architecture behavioral of entity xil_defaultlib.testbench
+Built simulation snapshot Testbench_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/ko/Desktop/elec3342/mcdecoder/mcdecoder.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Testbench_behav -key {Behavioral:sim_1:Functional:Testbench} -tclbatch {Testbench.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source Testbench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Testbench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 7785.051 ; gain = 0.000 ; free physical = 7659 ; free virtual = 28457
+run all
+Note: output ASCII code (decimal) = 65
+Time: 1925 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 84
+Time: 3825 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 6675 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+$finish called at time : 10 ms : File "/home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd" Line 158
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'Testbench'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/ko/Desktop/elec3342/mcdecoder/mcdecoder.sim/sim_1/behav/xsim'
+INFO: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/tools/Xilinx/Vivado/2021.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'Testbench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/ko/Desktop/elec3342/mcdecoder/mcdecoder.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj Testbench_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sources_1/new/mcdecoder.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'mcdecoder'
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/ko/Desktop/elec3342/mcdecoder/mcdecoder.sim/sim_1/behav/xsim'
+xelab -wto 69457726296b4ea2bb78d484392f4c3b --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot Testbench_behav xil_defaultlib.Testbench -log elaborate.log
+Vivado Simulator v2021.1.1
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2021.1/bin/unwrapped/lnx64.o/xelab -wto 69457726296b4ea2bb78d484392f4c3b --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot Testbench_behav xil_defaultlib.Testbench -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package std.env
+Compiling architecture behavioral of entity xil_defaultlib.mcdecoder [mcdecoder_default]
+Compiling architecture behavioral of entity xil_defaultlib.testbench
+Built simulation snapshot Testbench_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/ko/Desktop/elec3342/mcdecoder/mcdecoder.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Testbench_behav -key {Behavioral:sim_1:Functional:Testbench} -tclbatch {Testbench.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source Testbench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Testbench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 7797.055 ; gain = 0.000 ; free physical = 7480 ; free virtual = 28396
+run all
+Note: output ASCII code (decimal) = 65
+Time: 1925 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 84
+Time: 3825 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 32
+Time: 3875 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+Note: output ASCII code (decimal) = 77
+Time: 6675 us  Iteration: 1  Process: /Testbench/PEEK_RES  File: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd
+$finish called at time : 10 ms : File "/home/ko/Desktop/elec3342/mcdecoder/mcdecoder.srcs/sim_1/new/tb_mcdecoder.vhd" Line 158
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26c:part0:1.1 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26c/1.1/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26i:part0:1.1 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26i/1.1/board.xml as part xck26-sfvc784-2lvi-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.6 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kc705/1.6/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.6 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.6/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.7 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.7/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.4 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu116/1.4/board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.5 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu116/1.5/board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu1500:part0:1.2 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu1500/1.2/board.xml as part xcku115-flvb2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kv260:part0:1.1 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kv260/1.1/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:sp701:part0:1.0 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/sp701/1.0/board.xml as part xc7s100fgga676-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:sp701:part0:1.1 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/sp701/1.1/board.xml as part xc7s100fgga676-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc707:part0:1.4 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc707/1.4/board.xml as part xc7vx485tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc709:part0:1.8 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc709/1.8/board.xml as part xc7vx690tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.0 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/2.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.1 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/2.1/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.2 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/2.2/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_es:part0:1.1 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/es/1.1/board.xml as part xcvc1902-vsva2197-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_es:part0:1.2 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/es/1.2/board.xml as part xcvc1902-vsva2197-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_es:part0:1.3 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/es/1.3/board.xml as part xcvc1902-vsva2197-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.6 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.6/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.7 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.7/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu110:part0:1.4 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu110/1.4/board.xml as part xcvu190-flgc2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.0 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.0/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.3 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.3/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.4 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.4/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu128:part0:1.0 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu128/production/1.0/board.xml as part xcvu37p-fsvh2892-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu129:part0:1.0 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu129/production/1.0/board.xml as part xcvu29p-fsga2577-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu1525:part0:1.3 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu1525/1.3/board.xml as part xcvu9p-fsgd2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_mpsoc:part0:1.0 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vermeo_t1_mpsoc/1.0/board.xml as part xczu19eg-ffvd1760-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_rfsoc:part0:1.0 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vermeo_t1_rfsoc/1.0/board.xml as part xczu21dr-ffvd1156-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.0 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/2.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.1 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/2.1/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.2 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/2.2/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_es:part0:1.1 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/es/1.1/board.xml as part xcvm1802-vsva2197-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_es:part0:1.2 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/es/1.2/board.xml as part xcvm1802-vsva2197-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_es:part0:1.3 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/es/1.3/board.xml as part xcvm1802-vsva2197-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc702:part0:1.4 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zc702/1.4/board.xml as part xc7z020clg484-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:1.4 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zc706/1.4/board.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.3 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu102/3.3/board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.4 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu102/3.4/board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu104:part0:1.1 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu104/1.1/board.xml as part xczu7ev-ffvc1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu106:part0:2.4 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu106/2.4/board.xml as part xczu7ev-ffvc1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu106:part0:2.5 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu106/2.5/board.xml as part xczu7ev-ffvc1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu106:part0:2.6 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu106/2.6/board.xml as part xczu7ev-ffvc1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.2 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.2/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.3 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.3/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.4 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.4/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1275:part0:1.0 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu1275/1.0/board.xml as part xczu29dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1285:part0:1.0 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu1285/1.0/board.xml as part xczu39dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208:part0:2.0 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208/production/2.0/board.xml as part xczu48dr-fsvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208_es:part0:1.0 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208/es/1.0/board.xml as part xczu48dr-fsvg1517-2-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208_es:part0:1.1 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208/es/1.1/board.xml as part xczu48dr-fsvg1517-2-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208_es:part0:1.2 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208/es/1.2/board.xml as part xczu48dr-fsvg1517-2-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld_es:part0:1.0 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/es/1.0/board.xml as part xczu58dr-fsvg1517-2-i-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216:part0:2.0 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216/production/2.0/board.xml as part xczu49dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216_es:part0:1.0 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216/es/1.0/board.xml as part xczu49dr-ffvf1760-2-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216_es:part0:1.1 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216/es/1.1/board.xml as part xczu49dr-ffvf1760-2-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216_es:part0:1.2 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216/es/1.2/board.xml as part xczu49dr-ffvf1760-2-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld_es:part0:1.0 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/es/1.0/board.xml as part xczu59dr-ffvf1760-2-i-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26c:part0:1.1 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26c/1.1/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26i:part0:1.1 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26i/1.1/board.xml as part xck26-sfvc784-2lvi-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.6 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kc705/1.6/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.6 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.6/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.7 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.7/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.4 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu116/1.4/board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.5 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu116/1.5/board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu1500:part0:1.2 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu1500/1.2/board.xml as part xcku115-flvb2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kv260:part0:1.1 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kv260/1.1/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:sp701:part0:1.0 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/sp701/1.0/board.xml as part xc7s100fgga676-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:sp701:part0:1.1 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/sp701/1.1/board.xml as part xc7s100fgga676-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc707:part0:1.4 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc707/1.4/board.xml as part xc7vx485tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc709:part0:1.8 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc709/1.8/board.xml as part xc7vx690tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.0 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/2.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.1 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/2.1/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.2 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/2.2/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_es:part0:1.1 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/es/1.1/board.xml as part xcvc1902-vsva2197-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_es:part0:1.2 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/es/1.2/board.xml as part xcvc1902-vsva2197-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_es:part0:1.3 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/es/1.3/board.xml as part xcvc1902-vsva2197-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.6 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.6/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.7 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.7/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu110:part0:1.4 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu110/1.4/board.xml as part xcvu190-flgc2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.0 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.0/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.3 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.3/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.4 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.4/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu128:part0:1.0 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu128/production/1.0/board.xml as part xcvu37p-fsvh2892-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu129:part0:1.0 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu129/production/1.0/board.xml as part xcvu29p-fsga2577-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu1525:part0:1.3 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu1525/1.3/board.xml as part xcvu9p-fsgd2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_mpsoc:part0:1.0 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vermeo_t1_mpsoc/1.0/board.xml as part xczu19eg-ffvd1760-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_rfsoc:part0:1.0 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vermeo_t1_rfsoc/1.0/board.xml as part xczu21dr-ffvd1156-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.0 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/2.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.1 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/2.1/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.2 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/2.2/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_es:part0:1.1 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/es/1.1/board.xml as part xcvm1802-vsva2197-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_es:part0:1.2 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/es/1.2/board.xml as part xcvm1802-vsva2197-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_es:part0:1.3 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/es/1.3/board.xml as part xcvm1802-vsva2197-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc702:part0:1.4 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zc702/1.4/board.xml as part xc7z020clg484-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:1.4 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zc706/1.4/board.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.3 available at /tools/Xilinx/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu102/3.3/board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
+INFO: [Common 17-14] Message 'Board 49-26' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_project
+create_project symdet /home/ko/Desktop/elec3342/symdet -part xc7a35tcpg236-2
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2021.1/data/ip'.
+file mkdir /home/ko/Desktop/elec3342/symdet/symdet.srcs/sources_1/new
+close [ open /home/ko/Desktop/elec3342/symdet/symdet.srcs/sources_1/new/symdet.vhd w ]
+add_files /home/ko/Desktop/elec3342/symdet/symdet.srcs/sources_1/new/symdet.vhd
+update_compile_order -fileset sources_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+import_files -fileset sim_1 -norecurse /home/ko/Downloads/symdet_tb/L0.txt
+import_files -fileset sim_1 -norecurse /home/ko/Downloads/symdet_tb/Test_SYMDET.vhd
+update_compile_order -fileset sim_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'test_SYMDET'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/ko/Desktop/elec3342/symdet/symdet.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/tools/Xilinx/Vivado/2021.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'test_SYMDET' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported '/home/ko/Desktop/elec3342/symdet/symdet.sim/sim_1/behav/xsim/L0.txt'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/ko/Desktop/elec3342/symdet/symdet.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj test_SYMDET_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/ko/Desktop/elec3342/symdet/symdet.srcs/sources_1/new/symdet.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'symdet'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/ko/Desktop/elec3342/symdet/symdet.srcs/sim_1/imports/symdet_tb/Test_SYMDET.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'test_SYMDET'
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/ko/Desktop/elec3342/symdet/symdet.sim/sim_1/behav/xsim'
+xelab -wto 755a3c90677d4373891bac1f0345a3a3 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot test_SYMDET_behav xil_defaultlib.test_SYMDET -log elaborate.log
+Vivado Simulator v2021.1.1
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2021.1/bin/unwrapped/lnx64.o/xelab -wto 755a3c90677d4373891bac1f0345a3a3 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot test_SYMDET_behav xil_defaultlib.test_SYMDET -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-4940] 'fifo_generator_0' remains a black box since it has no binding entity [/home/ko/Desktop/elec3342/symdet/symdet.srcs/sources_1/new/symdet.vhd:77]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_textio
+Compiling package ieee.numeric_std
+Compiling package std.env
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling architecture behavioral of entity xil_defaultlib.symdet [symdet_default]
+Compiling architecture behavioral of entity xil_defaultlib.test_symdet
+Built simulation snapshot test_SYMDET_behav
+
+****** Webtalk v2021.1.1 (64-bit)
+  **** SW Build 3286242 on Wed Jul 28 13:09:46 MDT 2021
+  **** IP Build 3279568 on Wed Jul 28 16:48:48 MDT 2021
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+source /home/ko/Desktop/elec3342/symdet/symdet.sim/sim_1/behav/xsim/xsim.dir/test_SYMDET_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] '/home/ko/Desktop/elec3342/symdet/symdet.sim/sim_1/behav/xsim/xsim.dir/test_SYMDET_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Thu Nov  4 10:50:17 2021. For additional details about this file, please refer to the WebTalk help file at /tools/Xilinx/Vivado/2021.1/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Thu Nov  4 10:50:17 2021...
+run_program: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 7797.055 ; gain = 0.000 ; free physical = 6167 ; free virtual = 27877
+INFO: [USF-XSim-69] 'elaborate' step finished in '7' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/ko/Desktop/elec3342/symdet/symdet.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "test_SYMDET_behav -key {Behavioral:sim_1:Functional:test_SYMDET} -tclbatch {test_SYMDET.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source test_SYMDET.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'test_SYMDET_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 7797.055 ; gain = 0.000 ; free physical = 6121 ; free virtual = 27831
+update_compile_order -fileset sim_1
+run all
+$finish called at time : 6458323 ns : File "/home/ko/Desktop/elec3342/symdet/symdet.srcs/sim_1/imports/symdet_tb/Test_SYMDET.vhd" Line 90
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+import_files -fileset sim_1 -norecurse {/home/ko/Downloads/symdet_tb/L1.txt /home/ko/Downloads/symdet_tb/L2.txt /home/ko/Downloads/symdet_tb/L3.txt}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 7833.711 ; gain = 0.000 ; free physical = 5359 ; free virtual = 27443
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'test_SYMDET'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/ko/Desktop/elec3342/symdet/symdet.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/tools/Xilinx/Vivado/2021.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'test_SYMDET' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported '/home/ko/Desktop/elec3342/symdet/symdet.sim/sim_1/behav/xsim/L0.txt'
+INFO: [SIM-utils-43] Exported '/home/ko/Desktop/elec3342/symdet/symdet.sim/sim_1/behav/xsim/L1.txt'
+INFO: [SIM-utils-43] Exported '/home/ko/Desktop/elec3342/symdet/symdet.sim/sim_1/behav/xsim/L2.txt'
+INFO: [SIM-utils-43] Exported '/home/ko/Desktop/elec3342/symdet/symdet.sim/sim_1/behav/xsim/L3.txt'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/ko/Desktop/elec3342/symdet/symdet.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj test_SYMDET_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/ko/Desktop/elec3342/symdet/symdet.srcs/sim_1/imports/symdet_tb/Test_SYMDET.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'test_SYMDET'
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/ko/Desktop/elec3342/symdet/symdet.sim/sim_1/behav/xsim'
+xelab -wto 755a3c90677d4373891bac1f0345a3a3 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot test_SYMDET_behav xil_defaultlib.test_SYMDET -log elaborate.log
+Vivado Simulator v2021.1.1
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2021.1/bin/unwrapped/lnx64.o/xelab -wto 755a3c90677d4373891bac1f0345a3a3 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot test_SYMDET_behav xil_defaultlib.test_SYMDET -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-4940] 'fifo_generator_0' remains a black box since it has no binding entity [/home/ko/Desktop/elec3342/symdet/symdet.srcs/sources_1/new/symdet.vhd:77]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_textio
+Compiling package ieee.numeric_std
+Compiling package std.env
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling architecture behavioral of entity xil_defaultlib.symdet [symdet_default]
+Compiling architecture behavioral of entity xil_defaultlib.test_symdet
+Built simulation snapshot test_SYMDET_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/ko/Desktop/elec3342/symdet/symdet.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "test_SYMDET_behav -key {Behavioral:sim_1:Functional:test_SYMDET} -tclbatch {test_SYMDET.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source test_SYMDET.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'test_SYMDET_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 7833.711 ; gain = 0.000 ; free physical = 5352 ; free virtual = 27442
+run all
+$finish called at time : 83062367100 ps : File "/home/ko/Desktop/elec3342/symdet/symdet.srcs/sim_1/imports/symdet_tb/Test_SYMDET.vhd" Line 90
+close [ open /home/ko/Desktop/elec3342/symdet/symdet.srcs/sources_1/new/UART.vhd w ]
+add_files /home/ko/Desktop/elec3342/symdet/symdet.srcs/sources_1/new/UART.vhd
+update_compile_order -fileset sources_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+import_files -fileset sim_1 -norecurse /home/ko/Downloads/tb_uart.vhd
+update_compile_order -fileset sim_1
+launch_runs synth_1 -jobs 8
+[Thu Nov  4 10:59:16 2021] Launched synth_1...
+Run output will be captured here: /home/ko/Desktop/elec3342/symdet/symdet.runs/synth_1/runme.log
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'test_SYMDET'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/ko/Desktop/elec3342/symdet/symdet.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/tools/Xilinx/Vivado/2021.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'test_SYMDET' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported '/home/ko/Desktop/elec3342/symdet/symdet.sim/sim_1/behav/xsim/L0.txt'
+INFO: [SIM-utils-43] Exported '/home/ko/Desktop/elec3342/symdet/symdet.sim/sim_1/behav/xsim/L1.txt'
+INFO: [SIM-utils-43] Exported '/home/ko/Desktop/elec3342/symdet/symdet.sim/sim_1/behav/xsim/L2.txt'
+INFO: [SIM-utils-43] Exported '/home/ko/Desktop/elec3342/symdet/symdet.sim/sim_1/behav/xsim/L3.txt'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/ko/Desktop/elec3342/symdet/symdet.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj test_SYMDET_vhdl.prj
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/ko/Desktop/elec3342/symdet/symdet.sim/sim_1/behav/xsim'
+xelab -wto 755a3c90677d4373891bac1f0345a3a3 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot test_SYMDET_behav xil_defaultlib.test_SYMDET -log elaborate.log
+Vivado Simulator v2021.1.1
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2021.1/bin/unwrapped/lnx64.o/xelab -wto 755a3c90677d4373891bac1f0345a3a3 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot test_SYMDET_behav xil_defaultlib.test_SYMDET -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-4940] 'fifo_generator_0' remains a black box since it has no binding entity [/home/ko/Desktop/elec3342/symdet/symdet.srcs/sources_1/new/symdet.vhd:77]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/ko/Desktop/elec3342/symdet/symdet.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "test_SYMDET_behav -key {Behavioral:sim_1:Functional:test_SYMDET} -tclbatch {test_SYMDET.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source test_SYMDET.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'test_SYMDET_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 7895.738 ; gain = 0.000 ; free physical = 3485 ; free virtual = 25904
+run all
+$finish called at time : 83062367100 ps : File "/home/ko/Desktop/elec3342/symdet/symdet.srcs/sim_1/imports/symdet_tb/Test_SYMDET.vhd" Line 90
