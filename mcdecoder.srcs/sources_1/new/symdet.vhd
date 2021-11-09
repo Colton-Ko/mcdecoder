@@ -4,7 +4,7 @@
 -- 
 -- Create Date: 11/04/2021 12:17:55 PM
 -- Design Name: 
--- Module Name: symdet - Behavioral (L2)
+-- Module Name: symdet - Behavioral (L1)
 -- Project Name: 
 -- Target Devices: 
 -- Tool Versions: 
@@ -22,6 +22,7 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.std_logic_unsigned.all;
+use IEEE.numeric_std_unsigned.all;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -33,8 +34,7 @@ use IEEE.std_logic_unsigned.all;
 --use UNISIM.VComponents.all;
 
 entity symdet is
-    Port (
-        d_bin : in STD_LOGIC;
+    Port ( d_bin : in STD_LOGIC;
          dot : out STD_LOGIC;
          dash : out STD_LOGIC;
          lg : out STD_LOGIC;
@@ -44,11 +44,13 @@ entity symdet is
          clk : in STD_LOGIC);
 end symdet;
 
+
+
 architecture Behavioral of symdet is
     signal cnt0, cnt1: std_logic_vector(7 downto 0) := x"00";
     signal d_bin_prev: std_logic := '1';
     signal reset0, reset1, turned_on: std_logic := '0';
-    signal u: std_logic_vector (3 downto 0) := x"2";
+    signal u: std_logic_vector (3 downto 0) := x"3";
     signal u2, u4, u6, u8: std_logic_vector (7 downto 0);
 begin
     
@@ -114,7 +116,6 @@ begin
                         turned_on <= '1';
                         reset1 <= '1';
                     end if;
-                    
                     if (cnt1 > 0) and (cnt1 < u2) then
                         reset1 <= '1';
                     elsif (cnt1 > u2) and (cnt1 < u4) then
@@ -126,24 +127,11 @@ begin
                         valid <= '1';
                         reset1 <= '1';
                     end if;
-                    
                 elsif (d_bin = '1') then
-                    -- dot --
                     if (cnt0 > 0) and (cnt0 < u2) then
                         dot <= '1';
                         valid <= '1';
-                        
-                        
---                        if (cnt0 < x"4" and cnt0 > x"0") then
---                            u <= x"2";
---                        elsif (cnt0 < x"6" and cnt0 > x"3") then
---                            u <= x"3";
---                        elsif (cnt0 < x"8" and cnt0 > x"5") then
---                            u <= x"4";
---                        end if;
-                        
                         reset0 <= '1';
-                        
                     elsif (cnt0 > u2) and (cnt0 < u4) then
                         dash <= '1';
                         valid <= '1';
@@ -157,3 +145,4 @@ begin
     end process;
 
 end Behavioral;
+

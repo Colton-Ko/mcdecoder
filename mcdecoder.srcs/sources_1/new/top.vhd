@@ -31,23 +31,16 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity fifo_top is
+entity top is
     PORT (
-        clk : IN STD_LOGIC;
-        srst : IN STD_LOGIC;
-        din : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
-        wr_en : IN STD_LOGIC;
-        rd_en : IN STD_LOGIC;
-        dout : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
-        full : OUT STD_LOGIC;
-        almost_full : OUT STD_LOGIC;
-        empty : OUT STD_LOGIC;
-        almost_empty : OUT STD_LOGIC;
-        data_count : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
+        clk : IN std_logic ;
+        clr: IN std_logic ;
+        d_bin: IN std_logic ;
+        sout: OUT std_logic
     );
-end fifo_top;
+end top;
 
-architecture Behavioral of fifo_top is
+architecture Behavioral of top is
 
     COMPONENT fifo_generator_0
       PORT (
@@ -99,27 +92,19 @@ architecture Behavioral of fifo_top is
          clk : in STD_LOGIC);
     end component;
     
-    signal wr_en_fifo, rd_en_fifo, dot, dash, lg, wg, valid, busy, full_fifo, empty_fifo, d_bin: std_logic := '0';
-    signal wen, dvalid, dvalid_mc, wen_uart: std_logic := '1';
-    signal routeToDin : std_logic := '1';
+    signal dvalid_mc, wr_en_fifo, rd_en_fifo, dot, dash, lg, wg, valid, busy, full_fifo, empty_fifo: std_logic := '0';
     signal dout_fifo, dout_mc, din_fifo: std_logic_vector(7 downto 0) := x"00";
     
 begin
     -- Prevent underflow and overflow
-    wr_en_fifo <= wr_en and dvalid and not busy and not full_fifo;
-    rd_en_fifo <= rd_en and not empty_fifo and wen;
-    full <= full_fifo;
-    empty <= empty_fifo ;
-    dout <= dout_fifo ;
-    
-    -- determine din process
-    din_fifo <=  dout_mc when (routeToDin = '0') else
-                din when (routeToDin = '1');
+
+            wr_en_fifo <= dvalid_mc and not full_fifo;
+            rd_en_fifo <= not empty_fifo and not busy;
 
     MCDECODER_MAP: mcdecoder 
         PORT MAP (
             clk => clk,
-            clr => srst,
+            clr => clr,
             dot => dot,
             dash => dash,
             wg => wg,
@@ -132,9 +117,11 @@ begin
     UART_TX_MAP: uart_tx 
     PORT MAP (
         clk => clk,
-        clr => srst ,
+        clr => clr ,
         d => dout_fifo,
-        wen => wen_uart
+        wen => rd_en_fifo,
+        sout => sout,
+        busy => busy
     );
     
     SYMDET_MAP: symdet
@@ -145,23 +132,20 @@ begin
         lg => lg,
         wg => wg,
         valid => valid,
-        clr => srst,
+        clr => clr,
         clk => clk
     );
     
     FIFOGEN_MAP : fifo_generator_0
         PORT MAP (
             clk => clk,
-            srst => srst,
-            din => din_fifo ,
+            srst => clr,
+            din => dout_mc ,
             wr_en => wr_en_fifo,
             rd_en => rd_en_fifo,
             dout => dout_fifo,
             full => full_fifo,
-            empty => empty_fifo,
-            almost_empty => almost_empty,
-            almost_full => almost_full,
-            data_count => data_count 
+            empty => empty_fifo
         );
 
 
