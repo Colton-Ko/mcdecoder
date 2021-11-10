@@ -67,11 +67,13 @@ begin
     process(clw)
     begin
         if rising_edge (clw) then
+            busy <= '0';
             if (wen = '1') then
                 if (offset = x"9") then
                     offset <= x"0";
                 else
                     offset <= offset +1;
+                    busy <= '1';
                 end if;
             end if;
         end if;
@@ -83,42 +85,32 @@ begin
     begin
         if (clr = '1') then
             sout <= '1';
-            busy <= '0';
         end if;
         if rising_edge(clw) then
+            sout <= '1';
             case (offset) is
                 when (x"0") =>
                     -- Start bit --
-                    busy <= '1';
                     sout <= '0';
                 when (x"1") =>
-                    busy <= '1';
                     sout <= d(0);
                 when (x"2") =>
-                    busy <= '1';
                     sout <= d(1);
                 when (x"3") =>
-                    busy <= '1';
                     sout <= d(2);
                 when (x"4") =>
-                    busy <= '1';
                     sout <= d(3);
                 when (x"5") =>
-                    busy <= '1';
                     sout <= d(4);
                 when (x"6") =>
-                    busy <= '1';
                     sout <= d(5);
                 when (x"7") =>
-                    busy <= '1';
                     sout <= d(6);
                 when (x"8") =>
-                    busy <= '1';
                     sout <= d(7);
                 when (x"9") =>
                     -- Stop bit --
                     sout <= '1';
-                    busy <= '1';
                 when others => null;
             end case;
         end if;

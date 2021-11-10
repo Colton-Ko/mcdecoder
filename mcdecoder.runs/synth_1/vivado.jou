@@ -2,11 +2,11 @@
 # Vivado v2021.1.1 (64-bit)
 # SW Build 3286242 on Wed Jul 28 13:09:46 MDT 2021
 # IP Build 3279568 on Wed Jul 28 16:48:48 MDT 2021
-# Start of session at: Tue Nov  9 20:23:46 2021
-# Process ID: 2763
+# Start of session at: Wed Nov 10 09:03:21 2021
+# Process ID: 20161
 # Current directory: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.runs/synth_1
-# Command line: vivado -log fifo_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source fifo_top.tcl
-# Log file: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.runs/synth_1/fifo_top.vds
+# Command line: vivado -log symdet.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source symdet.tcl
+# Log file: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.runs/synth_1/symdet.vds
 # Journal file: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.runs/synth_1/vivado.jou
 #-----------------------------------------------------------
-source fifo_top.tcl -notrace
+source symdet.tcl -notrace
