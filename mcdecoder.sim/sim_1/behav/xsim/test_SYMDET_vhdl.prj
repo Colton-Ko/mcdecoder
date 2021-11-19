@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../mcdecoder.srcs/sources_1/new/symdet.vhd" \
+"../../../../mcdecoder.srcs/sim_1/imports/symdet_tb/Test_SYMDET.vhd" \
+
+# Do not sort compile order
+nosort

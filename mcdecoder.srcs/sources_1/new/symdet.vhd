@@ -4,7 +4,7 @@
 -- 
 -- Create Date: 11/04/2021 12:17:55 PM
 -- Design Name: 
--- Module Name: symdet - Behavioral (L2- NOT DONE!)
+-- Module Name: symdet - Behavioral (L2)
 -- Project Name: 
 -- Target Devices: 
 -- Tool Versions: 
@@ -45,49 +45,48 @@ end symdet;
 
 -- Start symbol: dot sg
 
+
 architecture Behavioral of symdet is
-    signal cnt0, cnt1: std_logic_vector(7 downto 0) := (others => '0');
+    signal cnt0, cnt1, din_fifo, dout_symdetfifo, dout_symdetfifo_prev, u: std_logic_vector(15 downto 0) := (others => '0');
     signal d_bin_prev, u_invalid: std_logic := '1';
-    signal reset0, reset1, turned_on, wr_en, rd_en_symdetfifo, rd_en_udetfifo: std_logic := '0';
-    signal full_udetfifo, empty_udetfifo, almost_full, almost_empty, full_symdetfifo, empty_symdetfifo: std_logic;
-    signal din_fifo, dout_udetfifo, dout_symdetfifo: std_logic_vector (7 downto 0) := (others => '0');
-    signal count_u, count_sym : std_logic_vector (6 downto 0) := (others => '0');
-    signal u : std_logic_vector (3 downto 0)  := x"0";
-    signal u2, u4, u6, u8: std_logic_vector (7 downto 0);
-    signal data_count_udetfifo, data_count_symdetfifo: std_logic_vector (6 downto 0);
+    signal reset0, reset1, turned_on, wr_en, rd_en_symdetfifo, output_trig: std_logic := '0';
+    signal almost_full, almost_empty, full_symdetfifo, empty_symdetfifo: std_logic;
+    signal count_u, count_sym : std_logic_vector (15 downto 0) := (others => '0');
+    signal u2, u4, u6, u8: std_logic_vector (19 downto 0) := (others => '0');
+    signal data_count_symdetfifo: std_logic_vector (6 downto 0);
 
     COMPONENT fifo_generator_1
-        PORT (
-            clk : IN STD_LOGIC;
-            srst : IN STD_LOGIC;
-            din : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
-            wr_en : IN STD_LOGIC;
-            rd_en : IN STD_LOGIC;
-            dout : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
-            full : OUT STD_LOGIC;
-            empty : OUT STD_LOGIC;
-            data_count: OUT std_logic_vector (6 downto 0);
-            almost_full : OUT std_logic;
-            almost_empty : OUT std_logic
-        );
-    END COMPONENT;
+      PORT (
+        clk : IN STD_LOGIC;
+        srst : IN STD_LOGIC;
+        din : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+        wr_en : IN STD_LOGIC;
+        rd_en : IN STD_LOGIC;
+        dout : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+        full : OUT STD_LOGIC;
+        almost_full : OUT STD_LOGIC;
+        empty : OUT STD_LOGIC;
+        almost_empty : OUT STD_LOGIC;
+        data_count : OUT STD_LOGIC_VECTOR(6 DOWNTO 0)
+      );
+      end component;
 
 begin
 
-    FIFO_DETERMINE_U_MAP : fifo_generator_1
-        PORT MAP (
-            clk => clk,
-            srst => clr,
-            din => din_fifo,
-            wr_en => wr_en,
-            rd_en => rd_en_udetfifo,
-            dout => dout_udetfifo ,
-            full => full_udetfifo,
-            empty => empty_udetfifo,
-            data_count => data_count_udetfifo,
-            almost_full => almost_full,
-            almost_empty => almost_empty
-        );
+--    FIFO_DETERMINE_U_MAP : fifo_generator_1
+--        PORT MAP (
+--            clk => clk,
+--            srst => clr,
+--            din => din_fifo,
+--            wr_en => wr_en,
+--            rd_en => rd_en_udetfifo,
+--            dout => dout_udetfifo ,
+--            full => full_udetfifo,
+--            empty => empty_udetfifo,
+--            data_count => data_count_udetfifo,
+--            almost_full => almost_full,
+--            almost_empty => almost_empty
+--        );
 
     FIFO_DETERMINE_SYM_MAP : fifo_generator_1
         PORT MAP (
@@ -113,13 +112,14 @@ begin
     end process;
 
     -- Counter for ones
+    -- Also for guessing the base unit
     proc_countOne:process (clk, cnt1)
     begin
         if rising_edge (clk) then
             if (clr = '1') then cnt1 <= (others => '0');
             elsif (reset1 = '1') then cnt1 <= (others => '0');
             elsif (d_bin = '1') then
-                if (cnt1 = x"FF") then cnt1 <= (others => '0');
+                if (cnt1 = x"7FFF") then cnt1 <= (others => '0');
                 else cnt1 <= cnt1 + 1;
                 end if;
             end if;
@@ -127,18 +127,19 @@ begin
     end process;
 
     -- Counter for zeros
+    -- Also for guessing the base unit
     proc_countZero:process (clk, cnt0)
     begin
         if rising_edge (clk) then
             if (clr = '1') then cnt0 <= (others => '0');
             elsif (reset0 = '1') then
                 if (u_invalid = '1') then
-                    u <= cnt0 (3 downto 0);
+                    u <= cnt0;
                     u_invalid <= '0';
                 end if;
                 cnt0 <= (others => '0');
             elsif (d_bin = '0') then
-                if (cnt0 = x"FF") then cnt0 <= (others => '0');
+                if (cnt0 = x"7FFF") then cnt0 <= (others => '0');
                 else cnt0 <= cnt0 + 1;
                 end if;
             end if;
@@ -168,7 +169,7 @@ begin
                         turned_on <= '1';
                     else
                         -- For CNT1 counter: din_fifo should start with 1.
-                        din_fifo <= '1' & cnt1(6 downto 0);
+                        din_fifo <= '1' & cnt1(14 downto 0);
                         wr_en <= '1';
                     end if;
                     reset1 <= '1';
@@ -176,7 +177,7 @@ begin
                 -- Falling edge
                 elsif (d_bin = '1') then
                     -- For CNT0 counter: din_fifo should start with 0.
-                    din_fifo <= '0' & cnt0(6 downto 0);
+                    din_fifo <= '0' & cnt0(14 downto 0);
                     wr_en <= '1';
                     reset0 <= '1';
                 end if;
@@ -184,6 +185,32 @@ begin
         end if;
         d_bin_prev <= d_bin;
 
+    end process;
+    
+    proc_writeToCountSym: process(clk, u_invalid)
+    begin
+        if rising_edge (clk) then
+            rd_en_symdetfifo <= '0';
+            if (u_invalid = '0') then
+                if (empty_symdetfifo = '0' or almost_empty = '1' or output_trig ='1') then
+                    rd_en_symdetfifo <= '1';
+                end if;
+            end if;
+        end if;
+    end process;
+    
+    
+    proc_outputTrig: process(clk)
+    begin
+        if rising_edge (clk) then
+            output_trig <= '0';
+            count_sym <= (others => '0');
+            if (dout_symdetfifo /= dout_symdetfifo_prev) then
+               output_trig <= '1';
+               count_sym <= '0' & dout_symdetfifo (14 downto 0);
+               dout_symdetfifo_prev <= dout_symdetfifo;
+            end if;
+        end if;
     end process;
 
     proc_determineOutput: process(clk, u_invalid)
@@ -194,14 +221,10 @@ begin
             dash <= '0';
             lg <= '0';
             wg <= '0';
-            rd_en_symdetfifo <= '0';
-            count_sym <= (others => '0');
 
             if (u_invalid = '0') then
-                if (empty_symdetfifo = '0' or almost_empty = '1') then
-                    rd_en_symdetfifo <= '1';
-                    count_sym <= dout_symdetfifo (6 downto 0);
-                    if dout_symdetfifo(7) = '1' then
+                if (output_trig  = '1') then
+                    if dout_symdetfifo(15) = '1' then
 
                         if (count_sym > 0) and (count_sym < u2) then
                             null; -- this is a sg
@@ -213,7 +236,7 @@ begin
                             valid <= '1';
                         end if;
 
-                    elsif dout_symdetfifo(7) = '0' then
+                    elsif dout_symdetfifo(15) = '0' then
 
                         if (count_sym > 0) and (count_sym < u2) then
                             dot <= '1';

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="test_SYMDET_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="test_SYMDET" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="7.266619333 ms"></ZoomStartTime>
+      <ZoomEndTime time="34.046619334 ms"></ZoomEndTime>
+      <Cursor1Time time="29.583286000 ms"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="220"></NameColumnWidth>
+      <ValueColumnWidth column_width="106"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="16" />
+   <wvobject type="logic" fp_name="/test_SYMDET/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/test_SYMDET/clr">
+      <obj_property name="ElementShortName">clr</obj_property>
+      <obj_property name="ObjectShortName">clr</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/test_SYMDET/d_bin">
+      <obj_property name="ElementShortName">d_bin</obj_property>
+      <obj_property name="ObjectShortName">d_bin</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/test_SYMDET/dash">
+      <obj_property name="ElementShortName">dash</obj_property>
+      <obj_property name="ObjectShortName">dash</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/test_SYMDET/dot">
+      <obj_property name="ElementShortName">dot</obj_property>
+      <obj_property name="ObjectShortName">dot</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/test_SYMDET/lg">
+      <obj_property name="ElementShortName">lg</obj_property>
+      <obj_property name="ObjectShortName">lg</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/test_SYMDET/wg">
+      <obj_property name="ElementShortName">wg</obj_property>
+      <obj_property name="ObjectShortName">wg</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/test_SYMDET/valid">
+      <obj_property name="ElementShortName">valid</obj_property>
+      <obj_property name="ObjectShortName">valid</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/test_SYMDET/count">
+      <obj_property name="ElementShortName">count</obj_property>
+      <obj_property name="ObjectShortName">count</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/test_SYMDET/finish_flag">
+      <obj_property name="ElementShortName">finish_flag</obj_property>
+      <obj_property name="ObjectShortName">finish_flag</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/test_SYMDET/UUT/din_fifo">
+      <obj_property name="ElementShortName">din_fifo[15:0]</obj_property>
+      <obj_property name="ObjectShortName">din_fifo[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/test_SYMDET/UUT/dout_symdetfifo">
+      <obj_property name="ElementShortName">dout_symdetfifo[15:0]</obj_property>
+      <obj_property name="ObjectShortName">dout_symdetfifo[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/test_SYMDET/clkPeriod">
+      <obj_property name="ElementShortName">clkPeriod</obj_property>
+      <obj_property name="ObjectShortName">clkPeriod</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/test_SYMDET/UUT/count_sym">
+      <obj_property name="ElementShortName">count_sym[15:0]</obj_property>
+      <obj_property name="ObjectShortName">count_sym[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/test_SYMDET/UUT/dout_symdetfifo_prev">
+      <obj_property name="ElementShortName">dout_symdetfifo_prev[15:0]</obj_property>
+      <obj_property name="ObjectShortName">dout_symdetfifo_prev[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/test_SYMDET/UUT/output_trig">
+      <obj_property name="ElementShortName">output_trig</obj_property>
+      <obj_property name="ObjectShortName">output_trig</obj_property>
+   </wvobject>
+</wave_config>

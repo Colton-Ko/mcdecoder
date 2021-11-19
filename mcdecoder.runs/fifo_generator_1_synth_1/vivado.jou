@@ -2,8 +2,8 @@
 # Vivado v2021.1.1 (64-bit)
 # SW Build 3286242 on Wed Jul 28 13:09:46 MDT 2021
 # IP Build 3279568 on Wed Jul 28 16:48:48 MDT 2021
-# Start of session at: Wed Nov 10 13:14:31 2021
-# Process ID: 68129
+# Start of session at: Thu Nov 18 09:34:07 2021
+# Process ID: 5061
 # Current directory: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.runs/fifo_generator_1_synth_1
 # Command line: vivado -log fifo_generator_1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source fifo_generator_1.tcl
 # Log file: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.runs/fifo_generator_1_synth_1/fifo_generator_1.vds
