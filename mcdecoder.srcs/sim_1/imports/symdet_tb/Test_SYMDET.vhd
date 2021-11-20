@@ -71,7 +71,7 @@ begin
     begin
         d_bin <= '1';
         wait for 20*clkPeriod;
-        file_open(read_file, "L2.txt", read_mode); --change to L1, L2, L3 for different level of test
+        file_open(read_file, "L3.txt", read_mode); --change to L1, L2, L3 for different level of test
         while not endfile(read_file) loop
             readline(read_file, line_v);
             read(line_v, read_bit);
@@ -85,7 +85,7 @@ begin
         file_close(read_file);
         d_bin <= '1';
         finish_flag <= '1';
-        wait for 20*clkPeriod;
+        wait for 8000*clkPeriod;
 
         std.env.finish;
     end process;

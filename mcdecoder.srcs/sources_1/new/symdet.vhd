@@ -4,7 +4,7 @@
 -- 
 -- Create Date: 11/04/2021 12:17:55 PM
 -- Design Name: 
--- Module Name: symdet - Behavioral (L2)
+-- Module Name: symdet - Behavioral (L3)
 -- Project Name: 
 -- Target Devices: 
 -- Tool Versions: 
@@ -15,7 +15,6 @@
 -- Revision:
 -- Revision 0.01 - File Created
 -- Additional Comments:
--- 
 ----------------------------------------------------------------------------------
 
 
@@ -33,75 +32,53 @@ use IEEE.std_logic_unsigned.all;
 --use UNISIM.VComponents.all;
 
 entity symdet is
-    Port ( d_bin : in STD_LOGIC;
-         dot : out STD_LOGIC;
-         dash : out STD_LOGIC;
-         lg : out STD_LOGIC;
-         wg : out STD_LOGIC;
-         valid : out STD_LOGIC;
-         clr : in STD_LOGIC;
-         clk : in STD_LOGIC);
+    Port ( d_bin : in STD_LOGIC := '0';
+         dot : out STD_LOGIC := '0';
+         dash : out STD_LOGIC := '0';
+         lg : out STD_LOGIC := '0';
+         wg : out STD_LOGIC := '0';
+         valid : out STD_LOGIC := '0';
+         clr : in STD_LOGIC := '0';
+         clk : in STD_LOGIC := '0');
 end symdet;
 
 -- Start symbol: dot sg
 
 
 architecture Behavioral of symdet is
-    signal cnt0, cnt1, din_fifo, dout_symdetfifo, dout_symdetfifo_prev, u: std_logic_vector(15 downto 0) := (others => '0');
+
+    signal cnt0, cnt1 : std_logic_vector(15 downto 0) := (others => '0');
     signal d_bin_prev, u_invalid: std_logic := '1';
-    signal reset0, reset1, turned_on, wr_en, rd_en_symdetfifo, output_trig: std_logic := '0';
-    signal almost_full, almost_empty, full_symdetfifo, empty_symdetfifo: std_logic;
+    signal reset0, reset1, turned_on, output_trig: std_logic := '0';
     signal count_u, count_sym : std_logic_vector (15 downto 0) := (others => '0');
     signal u2, u4, u6, u8: std_logic_vector (19 downto 0) := (others => '0');
-    signal data_count_symdetfifo: std_logic_vector (6 downto 0);
 
-    COMPONENT fifo_generator_1
-      PORT (
-        clk : IN STD_LOGIC;
-        srst : IN STD_LOGIC;
-        din : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
-        wr_en : IN STD_LOGIC;
-        rd_en : IN STD_LOGIC;
-        dout : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
-        full : OUT STD_LOGIC;
-        almost_full : OUT STD_LOGIC;
-        empty : OUT STD_LOGIC;
-        almost_empty : OUT STD_LOGIC;
-        data_count : OUT STD_LOGIC_VECTOR(6 DOWNTO 0)
-      );
-      end component;
+    signal u_c, u_c_next: std_logic_vector(3 downto 0) := (others => '0');
+    signal u_est_sum, u_est_sum_next, u, u_1st, u_est: std_logic_vector(15 downto 0) := (others => '0');
+    signal reset, u_est_avail, u_predicted, decode_dbuff_1st: std_logic := '0';
+
+    signal d_buff, d_buff_prev, d_buff_1st : std_logic_vector (15 downto 0) := (others => '0');
 
 begin
 
---    FIFO_DETERMINE_U_MAP : fifo_generator_1
---        PORT MAP (
---            clk => clk,
---            srst => clr,
---            din => din_fifo,
---            wr_en => wr_en,
---            rd_en => rd_en_udetfifo,
---            dout => dout_udetfifo ,
---            full => full_udetfifo,
---            empty => empty_udetfifo,
---            data_count => data_count_udetfifo,
---            almost_full => almost_full,
---            almost_empty => almost_empty
---        );
+    -- mux for choosing the final u to output
+    proc_mux_outputU: process(clk)
+    begin
+        if rising_edge (clk) then
+            if (clr = '1' or reset = '1') then
+                u <= (others => '0');
+            elsif (u_invalid = '0') then
+                case (u_est_avail) is
+                    when '0' => u <= u_1st ;
+                    when '1' => u <= u_est ;
+                    when others => null;
+                end case;
+            end if;
+        end if;
+    end process;
 
-    FIFO_DETERMINE_SYM_MAP : fifo_generator_1
-        PORT MAP (
-            clk => clk,
-            srst => clr,
-            din => din_fifo,
-            wr_en => wr_en,
-            rd_en => rd_en_symdetfifo ,
-            dout => dout_symdetfifo ,
-            full => full_symdetfifo,
-            empty => empty_symdetfifo,
-            data_count => data_count_symdetfifo
-        );
-
-    process (u, clk)
+    -- Generate multiples of u
+    proc_genMulU: process (u, clk)
     begin
         if (rising_edge (clk)) then
             u2 <= "000" & u & "0";
@@ -111,13 +88,21 @@ begin
         end if;
     end process;
 
+
+
     -- Counter for ones
     -- Also for guessing the base unit
     proc_countOne:process (clk, cnt1)
     begin
         if rising_edge (clk) then
+            reset <= '0';
             if (clr = '1') then cnt1 <= (others => '0');
-            elsif (reset1 = '1') then cnt1 <= (others => '0');
+            -- This is way too long
+            elsif (cnt1 > u8 and u8 > 0) then
+                reset <= '1';
+            elsif (reset1 = '1') then
+                cnt1 <= (others => '0');
+            elsif (reset = '1') then cnt1 <= (others => '0');
             elsif (d_bin = '1') then
                 if (cnt1 = x"7FFF") then cnt1 <= (others => '0');
                 else cnt1 <= cnt1 + 1;
@@ -127,15 +112,22 @@ begin
     end process;
 
     -- Counter for zeros
-    -- Also for guessing the base unit
+    -- Also for guessing the first base unit
     proc_countZero:process (clk, cnt0)
     begin
         if rising_edge (clk) then
-            if (clr = '1') then cnt0 <= (others => '0');
+            decode_dbuff_1st <= '0';
+            if (clr = '1' or reset = '1') then
+                cnt0 <= (others => '0');
+                u_1st <= (others => '0');
+                u_invalid <= '1';
+            elsif (reset = '1') then cnt0 <= (others => '0');
             elsif (reset0 = '1') then
                 if (u_invalid = '1') then
-                    u <= cnt0;
+                    u_1st <= cnt0;
                     u_invalid <= '0';
+                    d_buff_1st <= '0' & cnt0(14 downto 0);
+                    decode_dbuff_1st <= '1';
                 end if;
                 cnt0 <= (others => '0');
             elsif (d_bin = '0') then
@@ -157,10 +149,14 @@ begin
     begin
 
         if rising_edge (clk) then
+
             reset0 <= '0';
             reset1 <= '0';
-            wr_en <= '0';
-            din_fifo <= (others => '0');
+
+            if (reset = '1' or clr = '1') then
+                turned_on <= '0';
+                d_buff <= (others => '0');
+            end if;
 
             if (d_bin_prev /= d_bin) then
                 -- Rising edge
@@ -169,16 +165,14 @@ begin
                         turned_on <= '1';
                     else
                         -- For CNT1 counter: din_fifo should start with 1.
-                        din_fifo <= '1' & cnt1(14 downto 0);
-                        wr_en <= '1';
+                        d_buff <= '1' & cnt1(14 downto 0);
                     end if;
                     reset1 <= '1';
 
                 -- Falling edge
                 elsif (d_bin = '1') then
                     -- For CNT0 counter: din_fifo should start with 0.
-                    din_fifo <= '0' & cnt0(14 downto 0);
-                    wr_en <= '1';
+                    d_buff <= '0' & cnt0(14 downto 0);
                     reset0 <= '1';
                 end if;
             end if;
@@ -186,29 +180,42 @@ begin
         d_bin_prev <= d_bin;
 
     end process;
-    
-    proc_writeToCountSym: process(clk, u_invalid)
+
+    -- Sliding window average estimator, samples 4 base units of signal to determine change of base unit (speed)
+    proc_u_estimator_counter: process(clk)
     begin
         if rising_edge (clk) then
-            rd_en_symdetfifo <= '0';
-            if (u_invalid = '0') then
-                if (empty_symdetfifo = '0' or almost_empty = '1' or output_trig ='1') then
-                    rd_en_symdetfifo <= '1';
+            u_c <= u_c_next ;
+            u_est_sum <= u_est_sum_next ;
+            u_predicted <= '0';
+            if (reset = '1' or clr = '1') then
+                u_c <= (others => '0');
+                u_est_sum <= (others => '0');
+                u_est_avail <= '0';
+                u_est <= (others => '0');
+            else
+                -- If u_c = 8, then u_est = u_est_sum / 8;
+                if (u_c = "1000") then
+                    -- Divide by 8
+                    u_est <= "000" & u_est_sum (15 downto 3);
+                                        u_est_avail <= '1';
+                    u_predicted <= '1';
                 end if;
             end if;
         end if;
     end process;
-    
-    
+
     proc_outputTrig: process(clk)
     begin
         if rising_edge (clk) then
             output_trig <= '0';
             count_sym <= (others => '0');
-            if (dout_symdetfifo /= dout_symdetfifo_prev) then
-               output_trig <= '1';
-               count_sym <= '0' & dout_symdetfifo (14 downto 0);
-               dout_symdetfifo_prev <= dout_symdetfifo;
+            if (reset = '1' or clr = '1') then
+                d_buff_prev <= (others => '0');
+            elsif (d_buff /= d_buff_prev ) then
+                output_trig <= '1';
+                count_sym <= '0' & d_buff (14 downto 0);
+                d_buff_prev <= d_buff;
             end if;
         end if;
     end process;
@@ -222,12 +229,34 @@ begin
             lg <= '0';
             wg <= '0';
 
+            if (u_predicted = '1') then
+                u_c_next <= (others => '0');
+                u_est_sum_next <= (others => '0');
+            end if;
+
+            if (reset = '1' or clr = '1') then
+                u_c_next <= (others => '0');
+                u_est_sum_next <= (others => '0');
+            end if;
+            
+            if (decode_dbuff_1st = '1') then
+                dot <= '1';
+                valid <= '1';
+            end if;
+
+
             if (u_invalid = '0') then
                 if (output_trig  = '1') then
-                    if dout_symdetfifo(15) = '1' then
 
+                    if d_buff (15) = '1' then
+
+                        -- this is a sg
                         if (count_sym > 0) and (count_sym < u2) then
-                            null; -- this is a sg
+                            null;
+--                            if (u_predicted = '0') then
+--                                u_c_next <= u_c + 1;
+--                                u_est_sum_next <= u_est_sum + count_sym ;
+--                            end if;
                         elsif (count_sym > u2) and (count_sym < u4) then
                             lg <= '1';
                             valid <= '1';
@@ -236,9 +265,13 @@ begin
                             valid <= '1';
                         end if;
 
-                    elsif dout_symdetfifo(15) = '0' then
+                    elsif d_buff(15) = '0' then
 
                         if (count_sym > 0) and (count_sym < u2) then
+                            if (u_predicted = '0') then
+                                u_c_next <= u_c + 1;
+                                u_est_sum_next <= u_est_sum + count_sym ;
+                            end if;
                             dot <= '1';
                             valid <= '1';
 
@@ -253,4 +286,3 @@ begin
         end if;
     end process;
 end Behavioral;
-

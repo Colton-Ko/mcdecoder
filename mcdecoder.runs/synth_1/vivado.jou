@@ -2,8 +2,8 @@
 # Vivado v2021.1.1 (64-bit)
 # SW Build 3286242 on Wed Jul 28 13:09:46 MDT 2021
 # IP Build 3279568 on Wed Jul 28 16:48:48 MDT 2021
-# Start of session at: Thu Nov 18 08:20:26 2021
-# Process ID: 2267
+# Start of session at: Sat Nov 20 09:27:20 2021
+# Process ID: 4604
 # Current directory: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.runs/synth_1
 # Command line: vivado -log symdet.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source symdet.tcl
 # Log file: /home/ko/Desktop/elec3342/mcdecoder/mcdecoder.runs/synth_1/symdet.vds

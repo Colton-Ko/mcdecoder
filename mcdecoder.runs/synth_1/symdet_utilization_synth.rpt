@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.1.1 (lin64) Build 3286242 Wed Jul 28 13:09:46 MDT 2021
-| Date         : Thu Nov 18 08:20:58 2021
+| Date         : Sat Nov 20 09:27:54 2021
 | Host         : K126LTX running 64-bit Ubuntu 20.04.3 LTS
 | Command      : report_utilization -file symdet_utilization_synth.rpt -pb symdet_utilization_synth.pb
 | Design       : symdet
@@ -30,11 +30,11 @@ Table of Contents
 +-------------------------+------+-------+------------+-----------+-------+
 |        Site Type        | Used | Fixed | Prohibited | Available | Util% |
 +-------------------------+------+-------+------------+-----------+-------+
-| Slice LUTs*             |    0 |     0 |          0 |     20800 |  0.00 |
-|   LUT as Logic          |    0 |     0 |          0 |     20800 |  0.00 |
+| Slice LUTs*             |   16 |     0 |          0 |     20800 |  0.08 |
+|   LUT as Logic          |   16 |     0 |          0 |     20800 |  0.08 |
 |   LUT as Memory         |    0 |     0 |          0 |      9600 |  0.00 |
-| Slice Registers         |    0 |     0 |          0 |     41600 |  0.00 |
-|   Register as Flip Flop |    0 |     0 |          0 |     41600 |  0.00 |
+| Slice Registers         |   17 |     0 |          0 |     41600 |  0.04 |
+|   Register as Flip Flop |   17 |     0 |          0 |     41600 |  0.04 |
 |   Register as Latch     |    0 |     0 |          0 |     41600 |  0.00 |
 | F7 Muxes                |    0 |     0 |          0 |     16300 |  0.00 |
 | F8 Muxes                |    0 |     0 |          0 |      8150 |  0.00 |
@@ -57,7 +57,7 @@ Table of Contents
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
-| 0     |          Yes |       Reset |            - |
+| 17    |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -90,7 +90,7 @@ Table of Contents
 +-----------------------------+------+-------+------------+-----------+-------+
 |          Site Type          | Used | Fixed | Prohibited | Available | Util% |
 +-----------------------------+------+-------+------------+-----------+-------+
-| Bonded IOB                  |    7 |     0 |          0 |       106 |  6.60 |
+| Bonded IOB                  |    8 |     0 |          0 |       106 |  7.55 |
 | Bonded IPADs                |    0 |     0 |          0 |        10 |  0.00 |
 | Bonded OPADs                |    0 |     0 |          0 |         4 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |          0 |         5 |  0.00 |
@@ -115,7 +115,7 @@ Table of Contents
 +------------+------+-------+------------+-----------+-------+
 |  Site Type | Used | Fixed | Prohibited | Available | Util% |
 +------------+------+-------+------------+-----------+-------+
-| BUFGCTRL   |    0 |     0 |          0 |        32 |  0.00 |
+| BUFGCTRL   |    1 |     0 |          0 |        32 |  3.13 |
 | BUFIO      |    0 |     0 |          0 |        20 |  0.00 |
 | MMCME2_ADV |    0 |     0 |          0 |         5 |  0.00 |
 | PLLE2_ADV  |    0 |     0 |          0 |         5 |  0.00 |
@@ -149,8 +149,16 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
+| LUT2     |   18 |                 LUT |
+| FDRE     |   17 |        Flop & Latch |
+| CARRY4   |    9 |          CarryLogic |
 | OBUF     |    5 |                  IO |
-| IBUF     |    2 |                  IO |
+| LUT6     |    3 |                 LUT |
+| LUT3     |    3 |                 LUT |
+| IBUF     |    3 |                  IO |
+| LUT5     |    1 |                 LUT |
+| LUT1     |    1 |                 LUT |
+| BUFG     |    1 |               Clock |
 +----------+------+---------------------+
 
 
@@ -160,7 +168,7 @@ Table of Contents
 +------------------+------+
 |     Ref Name     | Used |
 +------------------+------+
-| fifo_generator_1 |    2 |
+| fifo_generator_1 |    1 |
 +------------------+------+
 
 

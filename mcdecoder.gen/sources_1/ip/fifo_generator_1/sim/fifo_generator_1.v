@@ -61,10 +61,8 @@ module fifo_generator_1 (
   rd_en,
   dout,
   full,
-  almost_full,
   empty,
-  almost_empty,
-  data_count
+  almost_empty
 );
 
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME core_clk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, INSERT_VIP 0" *)
@@ -81,19 +79,16 @@ input wire rd_en;
 output wire [15 : 0] dout;
 (* X_INTERFACE_INFO = "xilinx.com:interface:fifo_write:1.0 FIFO_WRITE FULL" *)
 output wire full;
-(* X_INTERFACE_INFO = "xilinx.com:interface:fifo_write:1.0 FIFO_WRITE ALMOST_FULL" *)
-output wire almost_full;
 (* X_INTERFACE_INFO = "xilinx.com:interface:fifo_read:1.0 FIFO_READ EMPTY" *)
 output wire empty;
 (* X_INTERFACE_INFO = "xilinx.com:interface:fifo_read:1.0 FIFO_READ ALMOST_EMPTY" *)
 output wire almost_empty;
-output wire [6 : 0] data_count;
 
   fifo_generator_v13_2_5 #(
     .C_COMMON_CLOCK(1),
     .C_SELECT_XPM(0),
     .C_COUNT_TYPE(0),
-    .C_DATA_COUNT_WIDTH(7),
+    .C_DATA_COUNT_WIDTH(4),
     .C_DEFAULT_VALUE("BlankString"),
     .C_DIN_WIDTH(16),
     .C_DOUT_RST_VAL("0"),
@@ -102,9 +97,9 @@ output wire [6 : 0] data_count;
     .C_FAMILY("artix7"),
     .C_FULL_FLAGS_RST_VAL(0),
     .C_HAS_ALMOST_EMPTY(1),
-    .C_HAS_ALMOST_FULL(1),
+    .C_HAS_ALMOST_FULL(0),
     .C_HAS_BACKUP(0),
-    .C_HAS_DATA_COUNT(1),
+    .C_HAS_DATA_COUNT(0),
     .C_HAS_INT_CLK(0),
     .C_HAS_MEMINIT_FILE(0),
     .C_HAS_OVERFLOW(0),
@@ -129,13 +124,13 @@ output wire [6 : 0] data_count;
     .C_PROG_EMPTY_THRESH_ASSERT_VAL(2),
     .C_PROG_EMPTY_THRESH_NEGATE_VAL(3),
     .C_PROG_EMPTY_TYPE(0),
-    .C_PROG_FULL_THRESH_ASSERT_VAL(126),
-    .C_PROG_FULL_THRESH_NEGATE_VAL(125),
+    .C_PROG_FULL_THRESH_ASSERT_VAL(14),
+    .C_PROG_FULL_THRESH_NEGATE_VAL(13),
     .C_PROG_FULL_TYPE(0),
-    .C_RD_DATA_COUNT_WIDTH(7),
-    .C_RD_DEPTH(128),
+    .C_RD_DATA_COUNT_WIDTH(4),
+    .C_RD_DEPTH(16),
     .C_RD_FREQ(1),
-    .C_RD_PNTR_WIDTH(7),
+    .C_RD_PNTR_WIDTH(4),
     .C_UNDERFLOW_LOW(0),
     .C_USE_DOUT_RST(1),
     .C_USE_ECC(0),
@@ -146,10 +141,10 @@ output wire [6 : 0] data_count;
     .C_USE_FWFT_DATA_COUNT(0),
     .C_VALID_LOW(0),
     .C_WR_ACK_LOW(0),
-    .C_WR_DATA_COUNT_WIDTH(7),
-    .C_WR_DEPTH(128),
+    .C_WR_DATA_COUNT_WIDTH(4),
+    .C_WR_DEPTH(16),
     .C_WR_FREQ(1),
-    .C_WR_PNTR_WIDTH(7),
+    .C_WR_PNTR_WIDTH(4),
     .C_WR_RESPONSE_LATENCY(1),
     .C_MSGON_VAL(1),
     .C_ENABLE_RST_SYNC(1),
@@ -305,26 +300,26 @@ output wire [6 : 0] data_count;
     .din(din),
     .wr_en(wr_en),
     .rd_en(rd_en),
-    .prog_empty_thresh(7'B0),
-    .prog_empty_thresh_assert(7'B0),
-    .prog_empty_thresh_negate(7'B0),
-    .prog_full_thresh(7'B0),
-    .prog_full_thresh_assert(7'B0),
-    .prog_full_thresh_negate(7'B0),
+    .prog_empty_thresh(4'B0),
+    .prog_empty_thresh_assert(4'B0),
+    .prog_empty_thresh_negate(4'B0),
+    .prog_full_thresh(4'B0),
+    .prog_full_thresh_assert(4'B0),
+    .prog_full_thresh_negate(4'B0),
     .int_clk(1'D0),
     .injectdbiterr(1'D0),
     .injectsbiterr(1'D0),
     .sleep(1'D0),
     .dout(dout),
     .full(full),
-    .almost_full(almost_full),
+    .almost_full(),
     .wr_ack(),
     .overflow(),
     .empty(empty),
     .almost_empty(almost_empty),
     .valid(),
     .underflow(),
-    .data_count(data_count),
+    .data_count(),
     .rd_data_count(),
     .wr_data_count(),
     .prog_full(),

@@ -1,1 +1,1 @@
--wto "69457726296b4ea2bb78d484392f4c3b" --incr --debug "typical" --relax --mt "8" -L "xil_defaultlib" -L "fifo_generator_v13_2_5" -L "unisims_ver" -L "unimacro_ver" -L "secureip" -L "xpm" --snapshot "test_SYMDET_behav" "xil_defaultlib.test_SYMDET" "xil_defaultlib.glbl" -log "elaborate.log" 
+-wto "69457726296b4ea2bb78d484392f4c3b" --incr --debug "typical" --relax --mt "8" -L "xil_defaultlib" -L "secureip" -L "xpm" --snapshot "test_SYMDET_behav" "xil_defaultlib.test_SYMDET" -log "elaborate.log" 
