@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="cfg_tb_au2mc_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="tb_au2mc" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000000000 ms"></ZoomStartTime>
+      <ZoomEndTime time="6,375.000000001 ms"></ZoomEndTime>
+      <Cursor1Time time="699.707554500 ms"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="265"></NameColumnWidth>
+      <ValueColumnWidth column_width="125"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="11" />
+   <wvobject type="array" fp_name="/tb_au2mc/ain">
+      <obj_property name="ElementShortName">ain[11:0]</obj_property>
+      <obj_property name="ObjectShortName">ain[11:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_au2mc/dut/amplititude">
+      <obj_property name="ElementShortName">amplititude[11:0]</obj_property>
+      <obj_property name="ObjectShortName">amplititude[11:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_au2mc/dut/ssum">
+      <obj_property name="ElementShortName">ssum[15:0]</obj_property>
+      <obj_property name="ObjectShortName">ssum[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_au2mc/dut/bg_volume">
+      <obj_property name="ElementShortName">bg_volume[11:0]</obj_property>
+      <obj_property name="ObjectShortName">bg_volume[11:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_au2mc/dut/have_sound">
+      <obj_property name="ElementShortName">have_sound</obj_property>
+      <obj_property name="ObjectShortName">have_sound</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_au2mc/dut/bg_volume_ready">
+      <obj_property name="ElementShortName">bg_volume_ready</obj_property>
+      <obj_property name="ObjectShortName">bg_volume_ready</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_au2mc/dut/ssize">
+      <obj_property name="ElementShortName">ssize[3:0]</obj_property>
+      <obj_property name="ObjectShortName">ssize[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_au2mc/clk_48k">
+      <obj_property name="ElementShortName">clk_48k</obj_property>
+      <obj_property name="ObjectShortName">clk_48k</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_au2mc/d_bin">
+      <obj_property name="ElementShortName">d_bin</obj_property>
+      <obj_property name="ObjectShortName">d_bin</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_au2mc/dut/filter_size">
+      <obj_property name="ElementShortName">filter_size[11:0]</obj_property>
+      <obj_property name="ObjectShortName">filter_size[11:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_au2mc/dut/filter_count">
+      <obj_property name="ElementShortName">filter_count[11:0]</obj_property>
+      <obj_property name="ObjectShortName">filter_count[11:0]</obj_property>
+   </wvobject>
+</wave_config>

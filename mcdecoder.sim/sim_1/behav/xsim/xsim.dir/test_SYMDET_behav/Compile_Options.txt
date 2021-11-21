@@ -1,1 +1,0 @@
--wto "69457726296b4ea2bb78d484392f4c3b" --incr --debug "typical" --relax --mt "8" -L "xil_defaultlib" -L "secureip" -L "xpm" --snapshot "test_SYMDET_behav" "xil_defaultlib.test_SYMDET" -log "elaborate.log" 

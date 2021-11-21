@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../mcdecoder_sys.srcs/sources_1/new/au2mc.vhd" \
+"../../../../mcdecoder_sys.srcs/sim_1/imports/tb_au2mc/tb_au2mc.vhd" \
+
+# Do not sort compile order
+nosort

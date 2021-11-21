@@ -1,0 +1,17 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:07 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Tue Nov 16 14:32:30 2021
+# Process ID: 27880
+# Current directory: /home/yzgao/Documents/ELEC3342/hw3/new_v2/mcdecoder_sys
+# Command line: vivado mcdecoder_sys.xpr
+# Log file: /home/yzgao/Documents/ELEC3342/hw3/new_v2/mcdecoder_sys/vivado.log
+# Journal file: /home/yzgao/Documents/ELEC3342/hw3/new_v2/mcdecoder_sys/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project mcdecoder_sys.xpr
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files /home/yzgao/Documents/ELEC3342/hw3/new_v2/mcdecoder_sys/archive_project_summary.txt] -no_script -reset -force -quiet
+remove_files  /home/yzgao/Documents/ELEC3342/hw3/new_v2/mcdecoder_sys/archive_project_summary.txt
+archive_project /home/yzgao/Documents/ELEC3342/hw3/new_v3/mcdecoder_sys.xpr.zip -force -exclude_run_results -include_local_ip_cache -include_config_settings
