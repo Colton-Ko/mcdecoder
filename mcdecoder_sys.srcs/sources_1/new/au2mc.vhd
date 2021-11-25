@@ -22,10 +22,10 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity au2mc is
     Port (
-        ain : in STD_LOGIC_VECTOR (11 downto 0);
+        ain : in STD_LOGIC_VECTOR (11 downto 0) := (others => '0');
         d_bin : out STD_LOGIC := '0';
-        clk_48k : in STD_LOGIC;
-        clr : in STD_LOGIC
+        clk_48k : in STD_LOGIC := '0';
+        clr : in STD_LOGIC := '0'
     );
 end au2mc;
 
@@ -43,13 +43,33 @@ architecture Behavioral of au2mc is
 
     -- For smoothing out the d_bin signal
     -- Filter size is learnt dynamically
-    signal filter_count: unsigned (11 downto 0) := (others => '0');
-    signal filter_size: unsigned (11 downto 0) := "000000001111";
+    signal filter_count, stolen: unsigned (11 downto 0) := (others => '0');
+    signal siglength: unsigned (11 downto 0) := (others => '0');
 
     signal bg_volume_ready : std_logic := '0';
-    signal add_to_ssum, d_bin_prev, max_cont: std_logic := '0';
+    signal add_to_ssum, d_bin_prev, out_stolen: std_logic := '0';
+
+    -- FILTER SIZE: IMPORTANT MESSAGE --
+    -- FOR au2mc HW3B submission, use filter_size = 384 (000110000000)
+    -- FOR au2mc REAL WORLD USAGE, use filter_size = 2048 (010000000000)
+    signal filter_size_sim: unsigned(11 downto 0) := "000110000000";
+    signal filter_size_real: unsigned(11 downto 0) := "101000000000";
+    signal filter_size: unsigned(11 downto 0) := (others => '0');
+    -- MODE SWITCH --
+    signal run_in_real_world: std_logic := '1';
 
 begin
+    proc_fsize_determine: process(clk_48k )
+    begin
+        if rising_edge (clk_48k ) then
+            if run_in_real_world ='1' then
+                filter_size <= filter_size_real ;
+            elsif run_in_real_world = '0' then
+                filter_size <= filter_size_sim ;
+            end if;
+        end if;
+    end process;
+
     -- Process for converting ain to 2's comlement integer, and add it to sample (IF it is not higher than background)
     proc_subConst_ain: process(clk_48k, ssize)
     begin
@@ -78,21 +98,39 @@ begin
         if rising_edge (clk_48k ) then
             d_bin <= '0';
 
-            if filter_count = 384 and have_sound = '1' then
-                filter_count <= (others => '0');
+            if filter_count > filter_size and have_sound = '1' then
                 d_bin <= '1';
                 d_bin_prev <= '1';
-            elsif  have_sound = '0' then
+
+            elsif have_sound = '0' then
+
+                d_bin_prev <= '0';
                 d_bin <= '0';
                 filter_count <= (others => '0');
-                d_bin_prev <= '0';
+
+                if (d_bin_prev = '1') then
+                    out_stolen <= '1';
+                    stolen <= filter_size;
+                    d_bin <= '1';
+                end if;
+
             elsif have_sound = '1' then
                 filter_count <= filter_count + 1;
-                d_bin <= d_bin_prev;
+
+            end if;
+            if (out_stolen = '1') then
+                d_bin <= '1';
+                if (stolen > 1) then
+                    stolen <= stolen-1;
+                else
+                    out_stolen <= '0';
+                    stolen <= (others => '0');
+                end if;
             end if;
         end if;
-        
+
     end process;
+
 
     proc_averageFilterCounterBG: process(clk_48k)
     begin

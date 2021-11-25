@@ -59,7 +59,7 @@ begin
         
         -- Stimuli starts here.  DO NOT modify anything above this line
 
-        file_open(file_in, "morse4.txt",  read_mode);
+        file_open(file_in, "morse3.txt",  read_mode);
      
         while not endfile(file_in) loop
           readline(file_in, v_linein);
